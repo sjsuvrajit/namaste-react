@@ -1,7 +1,7 @@
 # Episode 1 -- Incetion 
     - Pull CDN to your code to Inject React [https://legacy.reactjs.org/docs/cdn-links.html]
     - Research on what is CDN and crossorigin?
-    - React.createElement is an object, it becomes HTML when   we render this.
+    - React.createElement is an object, it becomes HTML when we render this.
 
 # Episode 2 -- Igniting App
     - There are few bundlers present: 
@@ -19,3 +19,22 @@
       You may get an error as we are mentioning entry point as index.html, but in package.json, the entry point mention as app.js. Remove that from package.json to execute this command.
     - NPX: In order to execute a npm package we are using npx.
            
+# Episode 3 -- Laying the foundation
+    - JSX: It is an HTML-like or XML-like Syntax.
+           It is not HTML inside JAVASCRIPT.
+    - JSX code is Transpiled before it goes to browser or JS Engine.
+    - Parcel is helping to do the transpilation. Basically parcel is using a package called Babel to do the transpilation. Parcel is a manager of Babel.
+    - As soon as Babel see there is a jsx code it transpiles to React.createElement.
+    - React Component: There are two types of component present in React.
+    - Class Component: It is a older way to write component
+    - Functional Component: Newar way of writing component.
+        - It is a javascript function that returns JSX or React Element.
+        - The name always satrts with a capital letter.
+    - Component Composition: When we call a component inside other component, is called as Component Composition.
+    - JSX Sanitize the data, if you send malicious data, JSX will take care of it. 
+
+
+
+## FUN Fact
+    - Story of NPM full form. The full form of NPM is everything except "Node Package Manager".
+    - Github Repo: https://github.com/npm/npm-expansions
