@@ -29,7 +29,7 @@ const styleCard = {
 const ResContainer = (props) => {
   const { resData } = props;
   const { name, cuisines, avgRating, costForTwo, sla, cloudinaryImageId } =
-    resData.info;
+    resData?.info;
   return (
     <div className="res-card" style={styleCard}>
       <div className="res-img">
