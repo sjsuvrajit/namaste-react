@@ -33,7 +33,33 @@
     - Component Composition: When we call a component inside other component, is called as Component Composition.
     - JSX Sanitize the data, if you send malicious data, JSX will take care of it. 
 
+# Episode 4 -- Talk is cheap, show me the code
+    - Planning for our Food Ordering App: Namaste Food
+        - Components
+            - Header
+                - Logo 
+                - Nav Items
+            - Body
+                - Search
+                - Restaurant Container
+                    - Restaurant Card
+            - Footer
+                - Copyright
+                - Links
+                - Address
+                - Contact
+    - Props (Properties/ Arguments of a function)
+        - For Dynamic Component Data in React we need to pass it as Props
+    - Config Driven UI --> See at the END
+    - When we lopping through a data best parctice to Use Key. Key should be always Unique. It is important to add Key because it helps to react to render component at the same level Uniquely. 
+    - React does not recomend index as key.
+    - we sgould use Key >>> Index >>>>>>>> Unique Key(Best Parctice) 
 
+
+## Config Driven UI 
+    - The Config Driven by a UI
+    - The Configaration of the UI will come from backend based on certain condition
+    - Example: If you are creating a food ordering application, your UI will be different based upon the city. As the offers will be different, also restaurants are different.
 
 ## FUN Fact
     - Story of NPM full form. The full form of NPM is everything except "Node Package Manager".
