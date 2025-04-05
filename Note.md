@@ -55,6 +55,14 @@
     - React does not recomend index as key.
     - we sgould use Key >>> Index >>>>>>>> Unique Key(Best Parctice) 
 
+# Episode 5 -- Let's Get Hooked
+    - A Normal Javascript Utility Function
+    - Whenever a state variable updates, React will re render the component.
+    - Two most important hooks --> 
+        - useState() --> Super Powerful state variable in React.
+        - useEffect()
+    - The most important super power of React is doing eficient DOM manipulation.
+      
 
 ## Config Driven UI 
     - The Config Driven by a UI
