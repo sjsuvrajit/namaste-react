@@ -62,7 +62,12 @@
         - useState() --> Super Powerful state variable in React.
         - useEffect()
     - The most important super power of React is doing eficient DOM manipulation.
-      
+    - Let's understand how React is Super powerfull at DOM manipulation?
+        - React is using Reconciliation Algorithm which is known as React fiber to do the DOM manipulation.
+        - Whenever we are creaitng a React Element, we are actullay creating a virtual DOM. Which is a Javascript Object.
+        - On Every render cycle The new UI compares it with the old VDOM. And make the changes to the actual DOM.
+        - This process is known as Reconciliation or the React diffing Algorithm. 
+        - Find the full Architecture of React Fiber: https://github.com/acdlite/react-fiber-architecture
 
 ## Config Driven UI 
     - The Config Driven by a UI
