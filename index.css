@@ -11,6 +11,7 @@
 
 .nav-items > ul {
     display: flex;
+    margin: 10px;
 }
 
 .nav-items > ul > li {
@@ -47,6 +48,34 @@
 }
 
 .filter-btn {
-    padding: 10px;
     margin: 10px;
+}
+
+.shimmer-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.shimmer-card {
+    margin: 10px;
+    width: 250px;
+    height: 450px;
+    background-color: #f0f0f0;
+}
+
+.login {
+    padding: 0 20px;
+    cursor: pointer;
+}
+
+.filter {
+    display: flex;
+}
+
+.search-box{
+    height: 25px;
+}
+
+.search-btn {
+    height: 30px;
 }

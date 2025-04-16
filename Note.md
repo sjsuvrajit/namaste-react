@@ -69,6 +69,24 @@
         - This process is known as Reconciliation or the React diffing Algorithm. 
         - Find the full Architecture of React Fiber: https://github.com/acdlite/react-fiber-architecture
 
+# Episode 6 -- Exploring the world
+    - useEffect() --> It takes two arguments.
+                     1. callback function
+                     2. Dependency Array
+    - useEffect(() => {}, []);
+    - When the callback function is called ?
+        - After the component renders, useEffect's callback function.
+        - If we need to do any operation after the component renders, we can use useEffect().
+    - fetch() is a superpower which js engine has.
+    - fetch() is given to us by the browser
+    - Conditional Rendering: Rendering a component based upon some condition is called Conditional Rendering.
+    - Why we need state variable useState() ?
+        - We can just declair a normal javascript local variable and we can get the work done. The problem is normal variable can not update dynamically. This is why we do not use Javascript variables in such cases.
+        - If you want to make your component dynamic, if you want somthing should change in your component, we use local state variable.
+    - Whenever a state variable changes, React will re render the component with updated values.
+    - or in other words, Whenever a state variable updates, React triggers a Reconciliation Cycle(Re render the component) 
+
+
 ## Config Driven UI 
     - The Config Driven by a UI
     - The Configaration of the UI will come from backend based on certain condition
