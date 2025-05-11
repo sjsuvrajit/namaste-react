@@ -104,6 +104,7 @@
     - We need to config our routers. For that we will use createBrowserRouter.
     - After configuaration we need to provide that configuaration to render the routes and components. We will use RouteProvider for that.
     - We need to handle the errors in route as well. We will use useRouteError for that. This hook will give more information about the error.
+    - For dynamic routes, we need to use another hook to read params. The hook is called useParams.
 
 
 
