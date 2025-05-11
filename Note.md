@@ -86,6 +86,26 @@
     - Whenever a state variable changes, React will re render the component with updated values.
     - or in other words, Whenever a state variable updates, React triggers a Reconciliation Cycle(Re render the component) 
 
+# Episode 7 -- Finding the Path
+    - How useEffect works ?
+        - useEffect take two arguments.
+            1. callback function (Always Required)
+            2. Dependecncy Array (Optioanl)
+        - However Dependecy Array can change the behaviour of useEffect
+            - If there is no Dependecy Array present ==> useEffect will call on every reender
+            - If the Dependency Array is empty ==> useEffect will call only on the initial render (just once)
+            - If there is some value present on the Dependency Array ==> useEffect will call whenever the value is updated. 
+                - Ex: If there is a local state variable named "btnName", So whenever the "btnName" is updated useEffect will call
+    - Some rules to consider for useState
+        - Always create useState indide a functional component. Do not create outside of a component
+        - Always create useState on the top of the functional component.
+        - Never create useState inside of a if-else block or inside a loop or inside any function. It will create inconsistency of the program.
+    - For Routing we will react-router-dom (npm package)
+    - We need to config our routers. For that we will use createBrowserRouter.
+    - After configuaration we need to provide that configuaration to render the routes and components. We will use RouteProvider for that.
+    - We need to handle the errors in route as well. We will use useRouteError for that. This hook will give more information about the error.
+
+
 
 ## Config Driven UI 
     - The Config Driven by a UI

@@ -1,5 +1,6 @@
 import ResContainer from "./ResContainer";
 import { useState, useEffect } from "react";
+import { Link } from "react-router";
 import Shimmer from "./Shimmer";
 
 const Body = () => {
@@ -56,7 +57,7 @@ const Body = () => {
       </div>
       <div className="res-container">
         {filteredResList.map((restaurant) => (
-          <ResContainer key={restaurant.info.id} resData={restaurant} />
+          <Link key={restaurant.info.id} to={"/restaurant/"+restaurant.info.id}><ResContainer  resData={restaurant} /></Link>
         ))}
       </div>
     </div>
