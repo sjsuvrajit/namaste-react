@@ -17,31 +17,47 @@ const Body = () => {
 
   const fetchData = async () => {
     const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.6418276&lng=88.42963530000002&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+      "https://thingproxy.freeboard.io/fetch/https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.6418276&lng=88.42963530000002&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+    );
 
     const json = await data.json();
-    
 
-    setRestaurentList(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-    setFilteredResList(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-
-  }
+    setRestaurentList(
+      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
+    setFilteredResList(
+      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
+  };
 
   //conditional Rendering
-  return restaurentList.length === 0 ? <Shimmer/> : (
+  return restaurentList.length === 0 ? (
+    <Shimmer />
+  ) : (
     <div className="body">
       <div className="filter">
         <div className="search">
-          <input type="text" className="search-box" value={searchItem}
-          onChange={(e) => {
-            setSearchItem(e.target.value);
-          }}/>
-          <button className="search-btn" onClick={() => {
-            console.log(searchItem);
-            const filteredRes = restaurentList.filter((res) => res.info.name.toLowerCase().includes(searchItem.toLowerCase()))
-            console.log(filteredRes);
-            setFilteredResList(filteredRes);
-          }}>Search</button>
+          <input
+            type="text"
+            className="search-box"
+            value={searchItem}
+            onChange={(e) => {
+              setSearchItem(e.target.value);
+            }}
+          />
+          <button
+            className="search-btn"
+            onClick={() => {
+              console.log(searchItem);
+              const filteredRes = restaurentList.filter((res) =>
+                res.info.name.toLowerCase().includes(searchItem.toLowerCase())
+              );
+              console.log(filteredRes);
+              setFilteredResList(filteredRes);
+            }}
+          >
+            Search
+          </button>
         </div>
         <button
           className="filter-btn"
@@ -57,7 +73,12 @@ const Body = () => {
       </div>
       <div className="res-container">
         {filteredResList.map((restaurant) => (
-          <Link key={restaurant.info.id} to={"/restaurant/"+restaurant.info.id}><ResContainer  resData={restaurant} /></Link>
+          <Link
+            key={restaurant.info.id}
+            to={"/restaurant/" + restaurant.info.id}
+          >
+            <ResContainer resData={restaurant} />
+          </Link>
         ))}
       </div>
     </div>
